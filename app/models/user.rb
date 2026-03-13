@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-  has_many :posts, dependent: nullify
+  has_many :posts, dependent: :nullify
 
   validates :username, presence: true, uniqueness: true
   validates :email, presence: true, uniqueness: true
