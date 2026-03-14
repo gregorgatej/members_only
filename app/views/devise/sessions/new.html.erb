@@ -1,10 +1,12 @@
 <h2>Log in</h2>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <p><%= f.label :username %></p>
-    <p><%= f.text_field :username %></p>
+<% if alert %>
+  <div style="color: red; margin-bottom: 20px;">
+    <%= alert %>
   </div>
+<% end %>
+
+<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   
   <div class="field">
     <p><%= f.label :email %></p>
