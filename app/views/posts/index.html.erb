@@ -1,0 +1,22 @@
+<h1>All Posts</h1>
+
+<% if current_user %>
+<br>
+<h2>Greetings <%= current_user.name %>!</h2>
+<br>
+
+<% end %>
+
+<% @posts.each do |post| %>
+
+  <ul>
+    <li>
+      <p><%= post.title %></p>
+      <p><%= post.body %></p>
+    </li>
+    <br>
+  </ul>
+
+<% end %>
+
+<%= link_to "New Post", new_post_path %>

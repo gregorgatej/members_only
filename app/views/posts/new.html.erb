@@ -1,0 +1,21 @@
+<h1>Add Post</h1>
+
+<% form_with model: @post do |form| %>
+
+<div>
+  <%= form.label :title, "Title:"%>
+  <%= form.text_field :title %>
+</div>
+
+<div>
+  <%= form.label :body, "Body:" %>
+  <%= form.text_field :body, placeholder: "What's on your mind today? ..." %>
+</div>
+
+<div>
+  <%= form.submit "Submit Post" %>
+</div>
+
+<% end %>
+<br>
+<%= link_to "Back to Posts", posts_path %>
